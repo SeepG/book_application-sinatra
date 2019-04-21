@@ -1,0 +1,15 @@
+<div class="container">
+  <h2><%= @book.title %></h2>
+  <p class="book_title"><%= @book.title %></p>
+  <a href="/books/<%= @book.id %>/edit">Edit</a>
+  <div class="content">
+    <p class="genre"><%= @book.genre %></p>
+    <p class="author">"<%= @book.author %>"</p>
+  </div>
+  <br>
+  
+  <form action="/books/<%= @book.id %>" method="post">
+    <input name="_method" type="hidden" value="delete">
+    <button class="btn btn-danger" type="submit">Delete</button>
+  </form>
+</div>

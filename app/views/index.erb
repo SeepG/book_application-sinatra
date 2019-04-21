@@ -1,0 +1,24 @@
+ <div class="container"> 
+  <h1>Books</h1>
+  <div class="row cards">
+    <% @books.each do |book| %>   
+      <div class="col-xs-4 col-sm-4">
+        <div class="card">
+          <div class="card-description">
+            <h2><%= book.title %></h2>
+            <p><%= book.genre %></p>
+          </div>
+          <a href="/books/<%= book.id %>"class="card-link">
+            <%= book.title %>
+          </a>
+        </div>
+      </div> 
+    <% end %>
+  </div> 
+</div>
+<script src="<%=url('javascripts/random_background.js') %>"></script>
+
+
+
+ 
+
